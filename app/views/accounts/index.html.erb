@@ -1,0 +1,34 @@
+<div class='profile-name text-center'>
+  Hello, <%= current_user.username %>
+</div>
+<hr>
+<% if @accounts.count == 2 %>
+  <div class='profile-text text-center'>
+      Your accounts:
+  </div>
+  <div class="container">
+    <div class="row accounts">
+      <div class="col-sm text-center" style="padding-right:20px; border-right: 1px solid #ccc;">
+        <%= @accounts.find_by(currency: 'UAH').currency %> : <%= @accounts.find_by(currency: 'UAH').amount %>
+      </div>
+      <div class="col-sm text-center">
+        <%= @accounts.find_by(currency: 'USD').currency %> : <%= @accounts.find_by(currency: 'USD').amount %>
+      </div>
+    </div>
+  </div>
+<% elsif @accounts.count == 1 %>
+  <div class='profile-text text-center'>
+      Your account:
+  </div>
+  <div class="container">
+    <div class="row accounts">
+      <div class="col-sm text-center">
+        <%= @accounts.first.currency %> : <%= @accounts.first.amount %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class='profile-text text-center'>
+      Cannot find any account
+  </div>
+<% end %>

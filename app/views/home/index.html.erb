@@ -1,3 +1,6 @@
 <div class="homepage-output">
-  Our super-puper homepage
+    <% if user_signed_in? %>
+      <div class="form-inline name-output">Hello, <%= current_user.username %></div>
+    <% end %>
+    Our super-puper homepage
 </div>
