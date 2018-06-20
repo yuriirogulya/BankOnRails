@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'accounts#index'
   resources :users do
-    resources :accounts
+    resources :accounts do
+      post 'withdraw', to: 'accounts#withdraw'
+    end
   end
 end
