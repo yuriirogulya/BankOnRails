@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def show; end
+
   private
 
   def user_params
@@ -13,6 +15,6 @@ class UsersController < ApplicationController
   end
 
   def find_user
-    @book = User.find(params[:id])
+    @user = params[:id] ? User.find(params[:id]) : current_user
   end
 end
