@@ -28,3 +28,4 @@ gem 'devise'
 gem 'simple_form'
 gem 'bootstrap'
 gem 'jquery-rails'
+
