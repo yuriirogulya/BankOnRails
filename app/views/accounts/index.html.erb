@@ -3,43 +3,9 @@
 </div>
 <hr>
 <% if @accounts.count == 2 %>
-  <div class='profile-text text-center'>
-      Your accounts:
-  </div>
-  <div class="container">
-    <div class="row accounts">
-      <div class="col-sm text-center" style="padding-right:20px; border-right: 1px solid #ccc;">
-        <%= @accounts.find_by(currency: 'UAH').currency %> : <%= @accounts.find_by(currency: 'UAH').amount %>
-        <%= simple_form_for @accounts.find_by(currency: 'UAH'),  url: user_account_withdraw_path(current_user.id, @accounts.find_by(currency: 'UAH')), method: :post do |f|%>
-        <%= f.input :amount, input_html: {value: ''} %>
-        <%= f.button :submit, 'Submit' %>
-      <% end %>
-      </div>
-      <div class="col-sm text-center">
-        <%= @accounts.find_by(currency: 'USD').currency %> : <%= @accounts.find_by(currency: 'USD').amount %>
-        <%= simple_form_for @accounts.find_by(currency: 'USD'),  url: user_account_withdraw_path(current_user.id, @accounts.find_by(currency: 'USD')), method: :post do |f|%>
-        <%= f.input :amount, input_html: {value: ''} %>
-        <%= f.button :submit, 'Submit' %>
-      <% end %>
-      </div>
-    </div>
-  </div>
+  <%= render 'two-accounts' %>
 <% elsif @accounts.count == 1 %>
-  <div class='profile-text text-center'>
-      Your account:
-  </div>
-  <div class="container">
-    <div class="row accounts">
-      <div class="col-sm text-center">
-        <%= @accounts.first.currency %> : <%= @accounts.first.amount %>
-      </div>
-      <%= simple_form_for @accounts.first,  url: user_account_withdraw_path(current_user.id, @accounts.first.id), method: :post do |f|%>
-        <%= f.input :amount, input_html: {value: ''} %>
-        <%= f.button :submit, 'Submit' %>
-      <% end %>
-      <!-- <%= button_to "qwe", user_account_withdraw_path(current_user.id, @accounts.first.id), method: :post %> -->
-    </div>
-  </div>
+  <%= render 'one-account' %>
 <% else %>
   <div class='profile-text text-center'>
       Cannot find any account

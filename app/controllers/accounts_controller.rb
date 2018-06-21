@@ -15,6 +15,11 @@ class AccountsController < ApplicationController
     @account.update(amount: new_amount)
   end
 
+  def deposit
+    new_amount = @account.amount + params[:account][:amount].to_i
+    @account.update(amount: new_amount)
+  end
+
   private
 
   def find_account
