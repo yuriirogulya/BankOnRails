@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   devise_for :users, skip: [:passwords]
 
   get 'profile', to: 'accounts#index'
-  resources :users do
+  resources :users, except: [:destroy] do
     resources :accounts do
-      post 'withdraw', to: 'accounts#withdraw'
-      post 'deposit', to: 'accounts#deposit'
+      post 'transaction', to: 'accounts#transaction'
     end
   end
 end

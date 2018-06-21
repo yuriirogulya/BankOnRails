@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_action :find_account, only: %i[show edit update destroy withdraw]
+  before_action :find_account, except: %i[index]
   before_action :authenticate_user!
 
   def index
@@ -10,17 +10,21 @@ class AccountsController < ApplicationController
 
   def edit; end
 
-  def withdraw
-    new_amount = @account.amount - params[:account][:amount].to_i
-    @account.update(amount: new_amount)
-  end
-
-  def deposit
-    new_amount = @account.amount + params[:account][:amount].to_i
-    @account.update(amount: new_amount)
+  def transaction
+    if params[:commit] == 'Withdraw'
+      new_amount = @account.amount - amount_params.to_i
+      @account.update(amount: new_amount)
+    elsif params[:commit] == 'Deposit'
+      new_amount = @account.amount + amount_params.to_i
+      @account.update(amount: new_amount)
+    end
   end
 
   private
+
+  def amount_params
+    params[:account][:amount]
+  end
 
   def find_account
     @user = User.find(params[:user_id])

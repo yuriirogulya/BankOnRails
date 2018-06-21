@@ -6,23 +6,19 @@
     <div class="col-sm text-center" style="padding-right:20px; border-right: 1px solid #ccc;">
       <%= @accounts.find_by(currency: 'UAH').currency %> balance : <%= @accounts.find_by(currency: 'UAH').amount %>
       <hr>
-      <div class='md-text text-center'>
-          Withdraw
-      </div>
-      <%= simple_form_for @accounts.find_by(currency: 'UAH'), url: user_account_withdraw_path(current_user.id, @accounts.find_by(currency: 'UAH')), method: :post do |f|%>
-        <%= f.input :amount, label: false, input_html: {value: ''}, class: 'btn btn-success input' %>
-        <%= f.button :submit, 'Submit', class: 'btn btn-success main-input' %>
+      <%= simple_form_for @accounts.find_by(currency: 'UAH'), url: user_account_transaction_path(current_user.id, @accounts.find_by(currency: 'UAH')), method: :post do |f|%>
+        <%= f.input :amount, label: false, input_html: {value: ''} %>
+        <%= f.button :submit, 'Withdraw', class: 'btn btn-success' %>
+        <%= f.button :submit, 'Deposit', class: 'btn btn-success' %>
       <% end %>
     </div>
     <div class="col-sm text-center">
       <%= @accounts.find_by(currency: 'USD').currency %> balance : <%= @accounts.find_by(currency: 'USD').amount %>
       <hr>
-      <div class='md-text text-center'>
-        Withdraw
-      </div>
-      <%= simple_form_for @accounts.find_by(currency: 'USD'),  url: user_account_withdraw_path(current_user.id, @accounts.find_by(currency: 'USD')), method: :post do |f|%>
+      <%= simple_form_for @accounts.find_by(currency: 'USD'),  url: user_account_transaction_path(current_user.id, @accounts.find_by(currency: 'USD')), method: :post do |f|%>
         <%= f.input :amount, label: false, input_html: {value: ''} %>
-        <%= f.button :submit, 'Submit', class: 'btn btn-success' %>
+        <%= f.button :submit, 'Withdraw', class: 'btn btn-success' %>
+        <%= f.button :submit, 'Deposit', class: 'btn btn-success' %>
       <% end %>
     </div>
   </div>

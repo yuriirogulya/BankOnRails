@@ -2,15 +2,18 @@
   Your account:
 </div>
 <div class="container">
+  <div class="text-center">
+    <%= @accounts.first.currency %> balance : <%= @accounts.first.amount %>
+  </div>
+    <hr>
   <div class="row accounts">
-    <div class="col-sm text-center">
-      <%= @accounts.first.currency %> balance : <%= @accounts.first.amount %>
-      <div class="">
-        <%= simple_form_for @accounts.first,  url: user_account_withdraw_path(current_user.id, @accounts.first.id), method: :post do |f|%>
+      <div class='col-sm text-center'>
+        <%= simple_form_for @accounts.first,  url: user_account_transaction_path(current_user.id, @accounts.first.id), method: :post do |f|%>
           <%= f.input :amount, input_html: {value: ''} %>
-          <%= f.button :submit, 'Submit', class: 'btn btn-success' %>
+          <%= f.button :submit, 'Withdraw', class: 'btn btn-success' %>
+          <%= f.button :submit, 'Deposit', class: 'btn btn-success' %>
         <% end %>
       </div>
-    </div>
   </div>
+
 </div>
