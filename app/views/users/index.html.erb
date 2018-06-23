@@ -1,8 +1,0 @@
-<div class='container text-center'>
-  <% @users.each do |user| %>
-    <%= link_to user.username, user %>
-    <%= user.email %>
-    <%= link_to "Edit", edit_user_path(@user) %>
-    <hr>
-  <% end %>
-</div>
