@@ -7,24 +7,14 @@ class AccountsController < ApplicationController
   end
 
   def transaction
-    if params[:commit] == 'Withdraw'
-      new_amount = @account.amount - amount_params.to_i
-      @account.update(amount: new_amount)
-    elsif params[:commit] == 'Deposit'
-      new_amount = @account.amount + amount_params.to_i
-      @account.update(amount: new_amount)
-    end
+    TransactionService.new(params).perform
     redirect_to accounts_url
   end
 
   private
 
-  def amount_params
-    params[:account][:amount]
+  def find_account
+    @user = User.find(params[:user_id])
+    @account = @user.accounts.find(params[:account_id])
   end
-
-  # def find_account
-  #   @user = User.find(params[:user_id])
-  #   @account = @user.accounts.find(params[:account_id])
-  # end
 end
