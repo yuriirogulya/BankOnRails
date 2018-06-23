@@ -7,12 +7,15 @@ class AccountsController < ApplicationController
   end
 
   def transaction
-    TransactionService.new(params).perform
-    redirect_to accounts_url
+    if TransactionService.new(params).perform
+      redirect_to accounts_url, notice: 'Your balance updated'
+    else
+      redirect_to accounts_url, alert: 'Your balance could not be updated. Not enough funds'
+    end
   end
 
   private
-
+  
   def find_account
     @user = User.find(params[:user_id])
     @account = @user.accounts.find(params[:account_id])
