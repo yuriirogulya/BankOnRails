@@ -1,9 +1,8 @@
 class TransactionService
-  def initialize(params)
-    @user = params[:user_id]
-    @account = params[:account_id]
-    @operation = params[:commit]
-    @amount = params[:account][:amount].to_i
+  def initialize(operation, account, amount)
+    @operation = operation
+    @account = account
+    @amount = amount
   end
 
   def perform

@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :rememberable,:validatable, authentication_keys: [:username]
 
   has_many :accounts
+
+  def role?(role_name)
+    role == role_name
+  end
 end

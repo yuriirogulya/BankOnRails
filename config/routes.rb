@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'accounts', to: 'accounts#index'
 
-  resources :users, only: [:edit] do
+  resources :users, except: [:destroy] do
     resources :accounts, only: %i[index] do
       post 'transaction', to: 'accounts#transaction'
     end
