@@ -1,0 +1,13 @@
+<div class='profile-name text-center'>
+  Hello, <%= current_user.username %>
+</div>
+<hr>
+<% if @accounts.count == 2 %>
+  <%= render 'two-accounts' %>
+<% elsif @accounts.count == 1 %>
+  <%= render 'one-account' %>
+<% else %>
+  <div class='profile-text text-center'>
+      Cannot find any account
+  </div>
+<% end %>

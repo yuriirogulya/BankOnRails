@@ -16,5 +16,4 @@ production:
   <<: *default
   database: bank_production
   username: yuriirogulya
-  password: <%= ENV['BANK_DATABASE_PASSWORD'] %>
   # url: <%= ENV['DATABASE_URL'] %>

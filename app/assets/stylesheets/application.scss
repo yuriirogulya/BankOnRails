@@ -1,0 +1,58 @@
+@import 'bootstrap';
+body {
+  font-family: 'Tajawal', sans-serif;
+}
+.mainpage{
+  margin-top: 20px;
+}
+.alert {
+  text-align: center
+}
+.homepage-output {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  font-size: 50px;
+  margin-left: -350px;
+}
+.name-output {
+  margin-right: 20px;
+}
+.navbar {
+  font-size: 20px;
+  height: 100px;
+  background: #f7f7f7
+}
+.navbar-brand {
+  font-size: 30px;
+}
+.nounderline a {
+  text-decoration: none;
+}
+
+.navbar-nav a {
+  color: black;
+}
+.navbar-nav a:hover {
+  color: grey;
+}
+
+
+
+// accounts
+
+.profile-name {
+  font-size: 50px;
+}
+.profile-text {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.md-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.accounts {
+  height: 200px;
+}
