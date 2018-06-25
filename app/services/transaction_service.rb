@@ -17,7 +17,7 @@ class TransactionService
   end
 
   def write_logs
-    AccountHistory.create(operation: operation, amount: amount, account_id: account)
+    Transaction.create(operation: operation, amount: amount, account_id: account)
   end
 
   private

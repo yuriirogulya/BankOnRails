@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 2018_06_24_185017) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "account_histories", force: :cascade do |t|
-    t.string "operation"
-    t.integer "amount"
-    t.bigint "account_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["account_id"], name: "index_account_histories_on_account_id"
-  end
-
   create_table "accounts", force: :cascade do |t|
     t.integer "user_id"
     t.string "currency"
@@ -31,6 +22,15 @@ ActiveRecord::Schema.define(version: 2018_06_24_185017) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "operation"
+    t.integer "amount"
+    t.bigint "account_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_transactions_on_account_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,5 +52,5 @@ ActiveRecord::Schema.define(version: 2018_06_24_185017) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "account_histories", "accounts"
+  add_foreign_key "transactions", "accounts"
 end

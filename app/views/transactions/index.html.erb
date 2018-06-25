@@ -1,5 +1,5 @@
 <div class="text-center search_by_account">
-  <%= form_tag account_histories_path, :method => 'get'  do %>
+  <%= form_tag transactions_path, :method => 'get'  do %>
     <%= text_field_tag :account_id, params[:account_id], placeholder: 'Enter account id' %>
     <%= submit_tag "Search", name: nil, class: 'btn btn-success', style: 'margin-left: 10px' %>
   <% end %>
@@ -19,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @account_histories.each do |a| %>
+    <% @transactions.each do |a| %>
     <tr>
       <th scope="row"><%= a.id %></th>
       <td><%= a.account_id %></td>
@@ -27,7 +27,7 @@
       <td><%= a.amount %></td>
       <td><%= current_user.accounts.where(id: a.account_id).first.currency %></td>
       <td><%= a.created_at.strftime("%d/%m/%Y | %T") %></td>
-      <td><%= button_to 'Delete', account_history_path(a), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger float-right' %></td>
+      <td><%= button_to 'Delete', transaction_path(a), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger float-right' %></td>
     </tr>
   <% end %>
   </tbody>

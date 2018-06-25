@@ -1,6 +1,6 @@
-class CreateAccountHistories < ActiveRecord::Migration[5.2]
+class CreateTransactions < ActiveRecord::Migration[5.2]
   def change
-    create_table :account_histories do |t|
+    create_table :transactions do |t|
       t.string :operation
       t.integer :amount
       t.references :account, foreign_key: true

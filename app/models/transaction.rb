@@ -1,4 +1,4 @@
-class AccountHistory < ApplicationRecord
+class Transaction < ApplicationRecord
   belongs_to :account
 
   scope :by_user_id, ->(user_id) do
