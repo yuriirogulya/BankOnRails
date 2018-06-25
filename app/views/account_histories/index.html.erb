@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Operation</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Time</th>
+      <th scope="col"></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @account_histories.each do |a| %>
+    <tr>
+      <th scope="row"><%= a.id %></th>
+      <td><%= a.operation %></td>
+      <td><%= a.amount %></td>
+      <td><%= a.created_at.strftime("%d/%m/%Y | %T") %></td>
+      <td><%= button_to 'Delete', account_history_path(a), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger float-right' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -7,12 +7,16 @@ class TransactionService
 
   def perform
     if @operation == 'Withdraw'
-      new_amount = current_account.amount - @amount
-      current_account.update(amount: new_amount)
+      new_amount = current_account.balance - @amount
+      current_account.update(balance: new_amount)
     elsif @operation == 'Deposit'
-      new_amount = current_account.amount + @amount
-      current_account.update(amount: new_amount)
+      new_amount = current_account.balance + @amount
+      current_account.update(balance: new_amount)
     end
+  end
+
+  def write_logs
+    AccountHistory.create(operation: @operation, amount: @amount, account_id: @account)
   end
 
   private
