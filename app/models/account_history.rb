@@ -5,4 +5,6 @@ class AccountHistory < ApplicationRecord
     a = Arel::Table.new(:accounts)
     joins(:account).where(a[:user_id].eq user_id)
   end
+  
+  scope :account_id, ->(account_id) { where(account_id: account_id) }
 end

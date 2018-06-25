@@ -29,3 +29,5 @@ gem 'simple_form'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'cancancan', '~> 2.0'
+gem 'has_scope'
+

@@ -1,6 +1,8 @@
 class AccountHistoriesController < ApplicationController
+  has_scope :account_id
+
   def index
-    @account_histories = AccountHistory.by_user_id(current_user.id)
+    @account_histories = apply_scopes(AccountHistory).by_user_id(current_user)
   end
 
   def destroy
