@@ -1,0 +1,10 @@
+image: ruby:2.5
+
+stages:
+  - spec
+    
+rspec:
+  stage: spec
+  script:
+    - gem install rspec
+    - rspec
