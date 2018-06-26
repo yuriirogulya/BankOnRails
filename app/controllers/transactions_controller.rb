@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  has_scope :account_id
+  has_scope :by_account_id, as: :account
 
   def index
     @transactions = apply_scopes(Transaction).by_user_id(current_user)
