@@ -2,7 +2,7 @@
   <%= f.input :email, required: true, autofocus: true %>
   <%= f.input :username, required: true %>
   <% if current_user.role?('admin') %>
-    <%= f.input :role, required: true, autofocus: true %>
+    <%= f.input :role, collection: ['admin', 'user'], include_blank: false, include_hidden: false %>
   <% end %>
   <%= f.button :submit, {:class=>"btn btn-default"} %>
 <% end %>

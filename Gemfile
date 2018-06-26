@@ -15,6 +15,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.7'
+end
+
+group :test do 
+  gem 'ffaker'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -29,3 +37,5 @@ gem 'simple_form'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'cancancan', '~> 2.0'
+gem 'has_scope'
+
