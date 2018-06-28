@@ -5,6 +5,6 @@ class Transaction < ApplicationRecord
     a = Arel::Table.new(:accounts)
     joins(:account).where(a[:user_id].eq user_id)
   end
-  
+
   scope :by_account_id, ->(account_id) { where(account_id: account_id) }
 end

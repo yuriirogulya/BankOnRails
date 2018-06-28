@@ -1,6 +1,6 @@
 <div class="text-center search_by_account">
   <%= form_tag transactions_path, :method => 'get'  do %>
-    <%= text_field_tag :account_id, params[:account_id], placeholder: 'Enter account id' %>
+    <%= text_field_tag :account, params[:account], placeholder: 'Enter account id' %>
     <%= submit_tag "Search", name: nil, class: 'btn btn-success', style: 'margin-left: 10px' %>
   <% end %>
 </div>

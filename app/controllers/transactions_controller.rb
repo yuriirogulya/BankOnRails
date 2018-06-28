@@ -8,6 +8,6 @@ class TransactionsController < ApplicationController
   def destroy
     @account_history = Transaction.find(params[:id])
     @account_history.destroy
-    redirect_to account_histories_path
+    redirect_to transactions_path
   end
 end
