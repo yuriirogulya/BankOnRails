@@ -29,6 +29,10 @@ module Api
       end
     end
 
+    def welcome
+      render json: { msg: 'Hello world' }
+    end
+
     private
 
     def user_params

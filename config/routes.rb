@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
+    root 'users#welcome'
+
     resources :transactions, only: %i[index destroy]
     get 'accounts', to: 'accounts#all_accounts'
     resources :users, except: %i[destroy] do
