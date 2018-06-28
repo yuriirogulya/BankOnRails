@@ -1,6 +1,6 @@
 module Api
   class AccountsController < BaseController
-    before_action :find_account, only: %i[show destroy transaction]
+    before_action :find_account, only: %i[show destroy]
     before_action :find_user, only: %i[index create]
 
     def all_accounts
@@ -34,14 +34,14 @@ module Api
     end
 
     def transaction
-      amount = transaction_params(:amount)
-      operation = transaction_params(:operation)
-      account = transaction_params(:account)
+      amount = transaction_params[:amount]
+      operation = transaction_params[:operation]
+      account = params[:account_id]
       if TransactionService.new(operation, account, amount).perform
         TransactionService.new(operation, account, amount).write_logs
-        render json: { msg: 'Your balance updated' } 
+        render json: { msg: 'Your balance updated' }
       else
-        render json: { msg: 'Your balance could not be updated. Not enough funds'} 
+        render json: { msg: 'Something wrong' }
       end
     end
 
@@ -52,7 +52,7 @@ module Api
     end
 
     def transaction_params
-      params.require(:transaction).permit(:amount, :operation, :account)
+      params.require(:transaction).permit(:amount, :operation)
     end
 
     def find_user
