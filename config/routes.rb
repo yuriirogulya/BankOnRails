@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     root 'users#welcome'
+    post 'auth' => 'user_token#create'
 
     resources :transactions, only: %i[index destroy]
     get 'accounts', to: 'accounts#all_accounts'

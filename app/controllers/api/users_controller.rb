@@ -1,9 +1,10 @@
 module Api
   class UsersController < BaseController
+    before_action :authenticate_user
     before_action :find_user, only: %i[show edit update destroy]
 
     def index
-      @users ||= User.all
+      @users = User.all
       render json: { users: @users }
     end
 

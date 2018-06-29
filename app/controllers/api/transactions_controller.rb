@@ -1,6 +1,7 @@
 module Api
   class TransactionsController < BaseController
     before_action :find_transaction, only: %i[destroy]
+    before_action :authenticate_user
     has_scope :by_account_id, as: :account
     has_scope :by_user_id, as: :user
 
