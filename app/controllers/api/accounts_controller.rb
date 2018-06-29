@@ -1,7 +1,7 @@
 module Api
   class AccountsController < BaseController
     before_action :find_account, only: %i[show destroy]
-    before_action :find_user, only: %i[index create]
+    before_action :find_user, only: %i[index show create]
     before_action :authenticate_user
 
     def all_accounts
@@ -14,7 +14,7 @@ module Api
     end
 
     def show
-      render json: { account: @account }
+      render json: { account: @user.accounts.find(@account.id) }
     end
 
     def create
