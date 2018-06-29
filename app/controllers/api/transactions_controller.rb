@@ -6,6 +6,11 @@ module Api
     has_scope :by_user_id, as: :user
 
     def index
+      @transactions = apply_scopes(Transaction).by_user_id(current_user)
+      render json: { transactions: @transactions }
+    end
+
+    def all_transactions
       @transactions = apply_scopes(Transaction).all
       render json: { transactions: @transactions }
     end

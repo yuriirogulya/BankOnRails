@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     post 'auth' => 'user_token#create'
 
     resources :transactions, only: %i[index destroy]
+    get 'all_transactions', to: 'transactions#all_transactions'
     get 'accounts', to: 'accounts#all_accounts'
     resources :users, except: %i[destroy] do
       resources :accounts, only: %i[index show create destroy] do
