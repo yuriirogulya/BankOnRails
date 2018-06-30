@@ -1,0 +1,66 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/users",
+  "description": "when noone logged-in",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "username",
+      "description": "Username"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "role",
+      "description": "Permission role"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/users",
+      "request_body": "user[username]=test&user[email]=testtest%40gmail.com&user[password]=testpassword&user[role]=admin",
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"msg\": \"User was created\",\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4M30.UtMxC7vLniBN_TlWvuqsYQ8k800wSxdyj3MaEL_5QLE\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ab9b7c3f571bf8ecc4dc51553d4219f2\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "4044f4a3-fce2-40dd-ae3c-49de6cc2b199",
+        "X-Runtime": "0.015703",
+        "Content-Length": "157"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

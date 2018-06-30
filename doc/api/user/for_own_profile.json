@@ -1,0 +1,61 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "api/users/:user_id",
+  "description": "for own profile",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "username",
+      "description": "Username"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "api/users/1188",
+      "request_body": "user[email]=new_email%40gmail.com",
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4OH0.TsNGtbyG4bCR2scL0Bl2oHfxBuxxBcwXQY57QxmlrUo",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"msg\": \"User 'bradley' was updated\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8bbe129cc72fefa0056832b7f9596b87\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "64e44248-89bc-441d-84a4-0ca161b8bec2",
+        "X-Runtime": "0.011354",
+        "Content-Length": "36"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

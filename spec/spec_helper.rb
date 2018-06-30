@@ -1,6 +1,6 @@
 require 'rails_helper'
 require 'rspec-rails'
-
+require 'rspec_api_documentation'
 DatabaseCleaner.strategy = :truncation
 
 RSpec.configure do |config|
@@ -17,4 +17,6 @@ end
 
 RspecApiDocumentation.configure do |config|
   config.format = :json
+  config.docs_dir = Rails.root.join("doc", "api")
+
 end

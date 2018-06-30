@@ -1,0 +1,170 @@
+{
+  "resources": [
+    {
+      "name": "Account",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Withdraw",
+          "link": "account/withdraw.json",
+          "groups": "all",
+          "route": "api/accounts/:account_id/transaction",
+          "method": "post"
+        },
+        {
+          "description": "Withdraw",
+          "link": "account/withdraw.json",
+          "groups": "all",
+          "route": "api/accounts/:account_id/transaction",
+          "method": "post"
+        },
+        {
+          "description": "for certain user account",
+          "link": "account/for_certain_user_account.json",
+          "groups": "all",
+          "route": "api/accounts/:account_id",
+          "method": "delete"
+        },
+        {
+          "description": "for current user",
+          "link": "account/for_current_user.json",
+          "groups": "all",
+          "route": "api/accounts",
+          "method": "get"
+        },
+        {
+          "description": "that belongs to current user",
+          "link": "account/that_belongs_to_current_user.json",
+          "groups": "all",
+          "route": "api/accounts/:account_id",
+          "method": "get"
+        },
+        {
+          "description": "that not belongs to current user",
+          "link": "account/that_not_belongs_to_current_user.json",
+          "groups": "all",
+          "route": "api/accounts/:account_id",
+          "method": "get"
+        },
+        {
+          "description": "when noone logged-in",
+          "link": "account/when_noone_logged-in.json",
+          "groups": "all",
+          "route": "api/accounts",
+          "method": "post"
+        },
+        {
+          "description": "when user logged-in",
+          "link": "account/when_user_logged-in.json",
+          "groups": "all",
+          "route": "api/accounts",
+          "method": "post"
+        },
+        {
+          "description": "without auth token",
+          "link": "account/without_auth_token.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Getting JWT for auth",
+          "link": "user/getting_jwt_for_auth.json",
+          "groups": "all",
+          "route": "api/auth",
+          "method": "post"
+        },
+        {
+          "description": "by 'profile' link",
+          "link": "user/by_'profile'_link.json",
+          "groups": "all",
+          "route": "api/profile",
+          "method": "get"
+        },
+        {
+          "description": "for another user with no admin rights",
+          "link": "user/for_another_user_with_no_admin_rights.json",
+          "groups": "all",
+          "route": "api/users/:user_id",
+          "method": "put"
+        },
+        {
+          "description": "for certain user by admin",
+          "link": "user/for_certain_user_by_admin.json",
+          "groups": "all",
+          "route": "api/users/:user_id",
+          "method": "put"
+        },
+        {
+          "description": "for own profile",
+          "link": "user/for_own_profile.json",
+          "groups": "all",
+          "route": "api/users/:user_id",
+          "method": "put"
+        },
+        {
+          "description": "when noone logged-in",
+          "link": "user/when_noone_logged-in.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "post"
+        },
+        {
+          "description": "with admin rights",
+          "link": "user/with_admin_rights.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "get"
+        },
+        {
+          "description": "with admin rights",
+          "link": "user/with_admin_rights.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "post"
+        },
+        {
+          "description": "with admin role",
+          "link": "user/with_admin_role.json",
+          "groups": "all",
+          "route": "api/users/:user_id",
+          "method": "get"
+        },
+        {
+          "description": "with missed params",
+          "link": "user/with_missed_params.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "post"
+        },
+        {
+          "description": "with user role",
+          "link": "user/with_user_role.json",
+          "groups": "all",
+          "route": "api/users/:user_id",
+          "method": "get"
+        },
+        {
+          "description": "without admin rights",
+          "link": "user/without_admin_rights.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "get"
+        },
+        {
+          "description": "without auth token",
+          "link": "user/without_auth_token.json",
+          "groups": "all",
+          "route": "api/users",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

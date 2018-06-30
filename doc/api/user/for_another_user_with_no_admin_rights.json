@@ -1,0 +1,34 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "api/users/:user_id",
+  "description": "for another user with no admin rights",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "username",
+      "description": "Username"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+
+  ]
+}

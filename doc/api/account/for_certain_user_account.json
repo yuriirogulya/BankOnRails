@@ -1,0 +1,44 @@
+{
+  "resource": "Account",
+  "resource_explanation": null,
+  "http_method": "DELETE",
+  "route": "api/accounts/:account_id",
+  "description": "for certain user account",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "api/accounts/319",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE2OX0.dZP2C40Yrb9Zp6CWJSxAeyQ_k8KdI7voBz_Zcd6DmW8",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"msg\": \"Account was deleted\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"faea24ad2294257d97a60aef1b04de6f\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "4cad4337-dbac-4966-9c8f-397056c02674",
+        "X-Runtime": "0.006250",
+        "Content-Length": "29"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/users",
+  "description": "with admin rights",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "username",
+      "description": "Username"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "role",
+      "description": "Permission role"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/users",
+      "request_body": "user[username]=username&user[email]=username%40gmail.com&user[password]=password&user[role]=admin",
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4NH0.QCO8bMzkfCMdVpoJOifAlnWPiSMgv9ON7Gu8SyUKDFY",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"msg\": \"User was created\",\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4NX0.5WMeCxlc-POptbjuvoO4hMm4iPxhmh1vA-X_SPRVY_g\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a62baaedcb1951d1e53a4fa9ad90046c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "1f551dc6-1ffd-44d6-8c67-8500c8480d9b",
+        "X-Runtime": "0.016971",
+        "Content-Length": "157"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

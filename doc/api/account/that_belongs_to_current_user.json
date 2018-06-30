@@ -1,0 +1,43 @@
+{
+  "resource": "Account",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/accounts/:account_id",
+  "description": "that belongs to current user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/accounts/316",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE2NX0.UfIzNlKlD-Zie-XPrBu0DcV1xMfuqefBwyrp9dCpvec",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"account\": {\n    \"id\": 316,\n    \"user_id\": 1165,\n    \"currency\": \"USD\",\n    \"balance\": 17265,\n    \"created_at\": \"2018-06-30T12:35:24.052Z\",\n    \"updated_at\": \"2018-06-30T12:35:24.052Z\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a0ed5092d43e13f0aca9a17102caa6fd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c02537a3-ae31-4af6-b393-f6feb9ba348d",
+        "X-Runtime": "0.009843",
+        "Content-Length": "150"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
