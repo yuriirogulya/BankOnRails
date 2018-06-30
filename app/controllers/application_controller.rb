@@ -1,9 +1,16 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :detect_device_variant
+
+  private
+
+  def detect_device_variant
+    request.variant = :phone if browser.device.mobile?
+  end
 
   protected
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     root_path
   end
 

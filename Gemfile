@@ -42,5 +42,6 @@ gem 'cancancan', '~> 2.0'
 gem 'has_scope'
 gem 'knock'
 gem 'apitome'
+gem "browser"
 
 
