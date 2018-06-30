@@ -10,11 +10,6 @@ module Api
       render json: { transactions: @transactions }
     end
 
-    def all_transactions
-      @transactions = apply_scopes(Transaction).all
-      render json: { transactions: @transactions }
-    end
-
     def destroy
       if @transaction.destroy
         render json: { msg: 'Transaction was deleted' }

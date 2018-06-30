@@ -1,24 +1,20 @@
 module Api
   class AccountsController < BaseController
     before_action :find_account, only: %i[show destroy]
-    before_action :find_user, only: %i[index show create]
     before_action :authenticate_user
+    load_and_authorize_resource
 
-    def all_accounts
-      @accounts = Account.all
+    def index
+      @accounts = current_user.accounts
       render json: { accounts: @accounts }
     end
 
-    def index
-      render json: { accounts: @user.accounts }
-    end
-
     def show
-      render json: { account: @user.accounts.find(@account.id) }
+      render json: { account: current_user.accounts.find(@account.id) }
     end
 
     def create
-      account = @user.accounts.new(account_params)
+      account = current_user  .accounts.new(account_params)
       if account.save
         render json: { msg: 'Account was created' }, status: :created
       else
@@ -54,10 +50,6 @@ module Api
 
     def transaction_params
       params.require(:transaction).permit(:amount, :operation)
-    end
-
-    def find_user
-      @user = User.find(params[:user_id])
     end
 
     def find_account

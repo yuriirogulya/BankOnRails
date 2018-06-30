@@ -3,7 +3,7 @@ class TransactionService
   def initialize(operation, account, amount)
     @operation = operation
     @account = account
-    @amount = amount
+    @amount = amount.to_i
   end
 
   def perform
