@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :transactions, only: %i[index destroy]
     get 'all_transactions', to: 'transactions#all_transactions'
     get 'accounts', to: 'accounts#all_accounts'
+    get 'profile', to: 'users#show'
     resources :users, except: %i[destroy] do
       resources :accounts, only: %i[index show create destroy] do
         post 'transaction', to: 'accounts#transaction'

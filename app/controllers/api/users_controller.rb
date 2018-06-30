@@ -1,7 +1,8 @@
 module Api
   class UsersController < BaseController
-    before_action :authenticate_user
+    before_action :authenticate_user, except: %i[welcome create]
     before_action :find_user, only: %i[show edit update destroy]
+    load_and_authorize_resource
 
     def index
       @users = User.all
@@ -15,8 +16,8 @@ module Api
     def create
       user = User.new(user_params)
       if user.save
-        # give token
-        render json: { msg: 'User was created' }, status: :created
+        token = Knock::AuthToken.new(payload: { sub: user.id }).token
+        render json: { msg: 'User was created', token: token }, status: :created
       else
         render json: { errors: user.errors.full_messages }, status: :unprocessible_entity
       end

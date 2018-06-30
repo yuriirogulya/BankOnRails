@@ -6,8 +6,8 @@ class Ability
     if user.role?('admin')
       can :manage, User
     elsif user.role?('user')
-      can :show, User, id: user.id
-      can :update, User, id: user.id
+      can :manage, User, id: user.id
+      cannot :index, User
     end
   end
 end

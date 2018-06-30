@@ -24,6 +24,7 @@ group :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'rspec_api_documentation' 
 end
 
 group :development do
@@ -40,4 +41,6 @@ gem 'jquery-rails'
 gem 'cancancan', '~> 2.0'
 gem 'has_scope'
 gem 'knock'
+gem 'apitome'
+
 
