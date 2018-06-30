@@ -27,6 +27,7 @@ resource 'User' do
   context 'Getting all users' do
     get 'api/users' do
       let!(:user)   { create(:user, role: 'admin') }
+      let!(:user2)  { create(:user) }
       let(:token)   { (Knock::AuthToken.new payload: { sub: user.id }).token }
       header 'Authorization', :token
 
@@ -34,7 +35,7 @@ resource 'User' do
         json = JSON.parse(response_body)
         expect(status).to eq 200
         expect(response_body).to include('users')
-        expect(json.count).to eq(User.count)
+        expect(json['users'].count).to eq(User.count)
       end
     end
 

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :transactions, only: %i[index destroy]
     get 'profile', to: 'users#show'
     resources :users, except: %i[destroy]
-    resources :accounts, only: %i[index show create destroy] do
+    resources :accounts, except: %i[new edit update] do
       post 'transaction', to: 'accounts#transaction'
     end
   end
