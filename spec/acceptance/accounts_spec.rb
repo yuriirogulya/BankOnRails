@@ -110,4 +110,52 @@ resource 'Account' do
       end
     end
   end
+
+  context 'Transactions' do
+    post 'api/accounts/:account_id/transaction' do
+      with_options scope: :transaction, required: true do
+        parameter :amount, 'Transaction amount'
+        parameter :operation, 'Transaction operation'
+      end
+      header 'Authorization', :token
+
+      let!(:user) { create(:user) }
+      let!(:account) { create(:account, balance: 100) }
+      let(:token) { (Knock::AuthToken.new payload: { sub: user.id }).token }
+
+      let(:account_id) { account.id }
+      let(:amount) { 100 }
+      let(:operation) { 'Deposit' }
+
+      example 'Withdraw' do
+        expect(Account.find(account.id).balance).to eq 100
+        do_request
+        expect(Account.find(account.id).balance).to eq 200
+        expect(status).to eq 200
+      end
+    end
+
+    post 'api/accounts/:account_id/transaction' do
+      with_options scope: :transaction, required: true do
+        parameter :amount, 'Transaction amount'
+        parameter :operation, 'Transaction operation'
+      end
+      header 'Authorization', :token
+
+      let!(:user) { create(:user) }
+      let!(:account) { create(:account, balance: 100) }
+      let(:token) { (Knock::AuthToken.new payload: { sub: user.id }).token }
+
+      let(:account_id) { account.id }
+      let(:amount) { 100 }
+      let(:operation) { 'Withdraw' }
+
+      example 'Withdraw' do
+        expect(Account.find(account.id).balance).to eq 100
+        do_request
+        expect(Account.find(account.id).balance).to eq 0
+        expect(status).to eq 200
+      end
+    end
+  end
 end
