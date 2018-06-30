@@ -14,11 +14,11 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/users/1180",
+      "request_path": "api/users/1207",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE3OX0.Is8-U9RcETdTMChoByAu7Gh6gsIhfwLtLAxM5s5OppA",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTIwNn0.kHc8a8CQzjwiXG1ZjkazV30ZhDpNkoq9Z3ue9elreus",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -27,14 +27,14 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"user\": {\n    \"id\": 1180,\n    \"email\": \"raguel@example.com\",\n    \"username\": \"raguel\",\n    \"role\": \"user\",\n    \"created_at\": \"2018-06-30T12:35:24.368Z\",\n    \"updated_at\": \"2018-06-30T12:35:24.368Z\"\n  }\n}",
+      "response_body": "{\n  \"user\": {\n    \"id\": 1207,\n    \"email\": \"naomi.franecki@example.com\",\n    \"username\": \"naomi.franecki\",\n    \"role\": \"user\",\n    \"created_at\": \"2018-06-30T12:39:52.698Z\",\n    \"updated_at\": \"2018-06-30T12:39:52.698Z\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4a9b108cb81c277443b75f23ccc8d666\"",
+        "ETag": "W/\"9d3c5f08ed7c989a565c3bab1517a738\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "306c1bad-3a93-404d-8522-c5eb33dcef60",
-        "X-Runtime": "0.005282",
-        "Content-Length": "163"
+        "X-Request-Id": "99659ad4-df88-49f1-93d6-2d7e8241b8bb",
+        "X-Runtime": "0.005355",
+        "Content-Length": "179"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

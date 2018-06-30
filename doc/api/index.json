@@ -5,8 +5,8 @@
       "explanation": null,
       "examples": [
         {
-          "description": "Withdraw",
-          "link": "account/withdraw.json",
+          "description": "Deposit",
+          "link": "account/deposit.json",
           "groups": "all",
           "route": "api/accounts/:account_id/transaction",
           "method": "post"

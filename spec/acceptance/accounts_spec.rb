@@ -127,7 +127,7 @@ resource 'Account' do
       let(:amount) { 100 }
       let(:operation) { 'Deposit' }
 
-      example 'Withdraw' do
+      example 'Deposit' do
         expect(Account.find(account.id).balance).to eq 100
         do_request
         expect(Account.find(account.id).balance).to eq 200

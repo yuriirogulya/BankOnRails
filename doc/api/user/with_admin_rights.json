@@ -41,7 +41,7 @@
       "request_body": "user[username]=username&user[email]=username%40gmail.com&user[password]=password&user[role]=admin",
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4NH0.QCO8bMzkfCMdVpoJOifAlnWPiSMgv9ON7Gu8SyUKDFY",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTIxMX0.KTGWO7qhKHOYUMqEhT6RtkbD7VfLktaDAOqFpUiDank",
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
@@ -51,13 +51,13 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"msg\": \"User was created\",\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4NX0.5WMeCxlc-POptbjuvoO4hMm4iPxhmh1vA-X_SPRVY_g\"\n}",
+      "response_body": "{\n  \"msg\": \"User was created\",\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTIxMn0.7p1CHJ9e9U1LO8yT6gnVyHv3nT2Dbzt2y3VdIQu76Oo\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a62baaedcb1951d1e53a4fa9ad90046c\"",
+        "ETag": "W/\"ca9a4b4e9d8db7429953b260d05d73d0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1f551dc6-1ffd-44d6-8c67-8500c8480d9b",
-        "X-Runtime": "0.016971",
+        "X-Request-Id": "e25f423b-f7a3-495e-8951-503973a36a7e",
+        "X-Runtime": "0.014774",
         "Content-Length": "157"
       },
       "response_content_type": "application/json; charset=utf-8",

@@ -31,11 +31,11 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "api/users/1187",
+      "request_path": "api/users/1214",
       "request_body": "user[username]=cool_username",
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4Nn0.oJ96KAROgZ2iZYsHZ3xzqKHh1fi-LokLijQvoXVOEq0",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTIxM30.-iyIgEXAWHsb9NLkdYP6By-cB-mrhrmU2JVXQAMipc8",
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
@@ -50,8 +50,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"c8a0f4941f3b4aa173aeb46ae7f01e44\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e782ee13-c083-42f1-8e19-47f0bce65b68",
-        "X-Runtime": "0.009296",
+        "X-Request-Id": "ea2be5be-a60f-4154-96d4-a96271abb3a0",
+        "X-Runtime": "0.009614",
         "Content-Length": "42"
       },
       "response_content_type": "application/json; charset=utf-8",

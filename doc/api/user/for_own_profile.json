@@ -31,11 +31,11 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "api/users/1188",
+      "request_path": "api/users/1215",
       "request_body": "user[email]=new_email%40gmail.com",
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4OH0.TsNGtbyG4bCR2scL0Bl2oHfxBuxxBcwXQY57QxmlrUo",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTIxNX0.m7W-IhHDEbUPVPV7PcqwFvz-1eHQZpFd0fxS_Gqr3_g",
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
@@ -45,14 +45,14 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"msg\": \"User 'bradley' was updated\"\n}",
+      "response_body": "{\n  \"msg\": \"User 'evonne.gusikowski' was updated\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"8bbe129cc72fefa0056832b7f9596b87\"",
+        "ETag": "W/\"5e78d2bdd82716609e22177438dd155f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "64e44248-89bc-441d-84a4-0ca161b8bec2",
-        "X-Runtime": "0.011354",
-        "Content-Length": "36"
+        "X-Request-Id": "d4fcc695-7dcd-4ebe-b42c-3e9963aea72b",
+        "X-Runtime": "0.011251",
+        "Content-Length": "46"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

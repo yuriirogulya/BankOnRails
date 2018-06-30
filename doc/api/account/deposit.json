@@ -3,7 +3,7 @@
   "resource_explanation": null,
   "http_method": "POST",
   "route": "api/accounts/:account_id/transaction",
-  "description": "Withdraw",
+  "description": "Deposit",
   "explanation": null,
   "parameters": [
     {
@@ -25,11 +25,11 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "api/accounts/329/transaction",
-      "request_body": "transaction[amount]=100&transaction[operation]=Withdraw",
+      "request_path": "api/accounts/328/transaction",
+      "request_body": "transaction[amount]=100&transaction[operation]=Deposit",
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTE5OX0.3svNTNnDTUQ8Aqvw_6579fmzzJnqYBMHXK8m1NuS420",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTE5N30.KnSbhdzSE3bUrkGYgZKmrVMkh0lQDiOYA26zTu_Egic",
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
@@ -44,8 +44,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"387372a939071cb81dd12c78751015b3\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "47b05756-4004-4612-b855-95029b5e2519",
-        "X-Runtime": "0.014110",
+        "X-Request-Id": "dd0c54cc-800d-4e8c-88ec-d47d7664fd35",
+        "X-Runtime": "0.029230",
         "Content-Length": "30"
       },
       "response_content_type": "application/json; charset=utf-8",

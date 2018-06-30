@@ -14,11 +14,11 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "api/accounts/319",
+      "request_path": "api/accounts/327",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE2OX0.dZP2C40Yrb9Zp6CWJSxAeyQ_k8KdI7voBz_Zcd6DmW8",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTE5Nn0.aXr8v2C4rLXRdsjvpZUX3dIcVoE3y4ufcrpJB-bOMg0",
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
@@ -33,8 +33,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"faea24ad2294257d97a60aef1b04de6f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4cad4337-dbac-4966-9c8f-397056c02674",
-        "X-Runtime": "0.006250",
+        "X-Request-Id": "4a7b3dd6-e45f-4775-80d6-660e5f2d0148",
+        "X-Runtime": "0.006403",
         "Content-Length": "29"
       },
       "response_content_type": "application/json; charset=utf-8",

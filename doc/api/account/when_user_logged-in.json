@@ -23,7 +23,7 @@
       "request_body": "account[currency]=UAH",
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE2OH0.oEvzz9sh-aDLXkYqNo67dHVbIKks2akljgz30MmLbII",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTE5NX0.hTe7f-otby25NYwgPjitxl1XY6vX7ipSYSoZEas-XLU",
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
@@ -38,8 +38,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"02cefd797b559a36f5e34906899aa26d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ddb7de1e-3187-4dc2-9017-eb3d7f35a05a",
-        "X-Runtime": "0.007734",
+        "X-Request-Id": "37662f80-dc66-4fe4-93d3-2d0072e09285",
+        "X-Runtime": "0.008059",
         "Content-Length": "29"
       },
       "response_content_type": "application/json; charset=utf-8",

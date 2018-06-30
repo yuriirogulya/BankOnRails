@@ -50,13 +50,13 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"msg\": \"User was created\",\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE4M30.UtMxC7vLniBN_TlWvuqsYQ8k800wSxdyj3MaEL_5QLE\"\n}",
+      "response_body": "{\n  \"msg\": \"User was created\",\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTIxMH0.d4XeaBZOb-Yuwm8_JJVBeecBoi4dYLwgIO2QnRfqzVU\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ab9b7c3f571bf8ecc4dc51553d4219f2\"",
+        "ETag": "W/\"bcf8d60b441db385757163571eb6cc4d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4044f4a3-fce2-40dd-ae3c-49de6cc2b199",
-        "X-Runtime": "0.015703",
+        "X-Request-Id": "2978cc32-27c7-4fff-8efa-5139ef930651",
+        "X-Runtime": "0.018072",
         "Content-Length": "157"
       },
       "response_content_type": "application/json; charset=utf-8",

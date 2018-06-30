@@ -14,11 +14,11 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/accounts/316",
+      "request_path": "api/accounts/324",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg1MjQsInN1YiI6MTE2NX0.UfIzNlKlD-Zie-XPrBu0DcV1xMfuqefBwyrp9dCpvec",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzA0NDg3OTIsInN1YiI6MTE5Mn0.llhvE1yN1a2inZVVROjWEqMnCmktMmwbP8riK3_dfDM",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -27,13 +27,13 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"account\": {\n    \"id\": 316,\n    \"user_id\": 1165,\n    \"currency\": \"USD\",\n    \"balance\": 17265,\n    \"created_at\": \"2018-06-30T12:35:24.052Z\",\n    \"updated_at\": \"2018-06-30T12:35:24.052Z\"\n  }\n}",
+      "response_body": "{\n  \"account\": {\n    \"id\": 324,\n    \"user_id\": 1192,\n    \"currency\": \"USD\",\n    \"balance\": 11521,\n    \"created_at\": \"2018-06-30T12:39:52.406Z\",\n    \"updated_at\": \"2018-06-30T12:39:52.406Z\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a0ed5092d43e13f0aca9a17102caa6fd\"",
+        "ETag": "W/\"26c3a5b8406be29e5889d45bd0e18e29\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c02537a3-ae31-4af6-b393-f6feb9ba348d",
-        "X-Runtime": "0.009843",
+        "X-Request-Id": "0d7c893b-ed8e-424d-a352-497de11a5183",
+        "X-Runtime": "0.006985",
         "Content-Length": "150"
       },
       "response_content_type": "application/json; charset=utf-8",
